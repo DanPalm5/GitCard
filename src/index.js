@@ -1,4 +1,4 @@
-import React, { Profiler } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 
@@ -17,7 +17,7 @@ class GitCard extends React.Component{
             followers: '',
             following: '',
             location: '',
-            bio: ''
+            
 
         }
     }
@@ -47,6 +47,8 @@ class GitCard extends React.Component{
 
 
 //////////////////////////////////////////
+// this will render the gitcard
 ReactDOM.render(
     <GitCard />, 
-    document.getElementById('root'));
+    document.getElementById('root')
+    );

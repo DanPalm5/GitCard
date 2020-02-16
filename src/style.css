@@ -1,0 +1,26 @@
+body {
+    font: 45px "Century Gothic", Futura, sans-serif;
+    color: black;
+    
+}
+
+
+
+.card { 
+    margin-top: 20%;
+    margin-left: 50%;
+    display: flex;
+}
+
+
+.profile-picture {
+    padding: 30px;
+}
+
+.name {
+    padding: 20px;
+}
+
+.other-info {
+    padding: 20px;
+}
