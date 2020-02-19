@@ -4,9 +4,11 @@ body {
     
 }
 
+.App {
+    
+}
 
-
-.card { 
+.GitCard { 
     margin-top: 20%;
     margin-left: 50%;
     display: flex;
