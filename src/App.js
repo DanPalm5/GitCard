@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import GitCard from './components/Gitcard'
+import Title from './components/Title'
 import './style.css'
 
 // API to get data
@@ -8,7 +8,14 @@ const API = 'https://api.github.com/users'
 
 
 class App extends React.Component {
-    
+    state = {
+        name: '',
+        profilePicture: '',
+        repos: '',
+        followers: '',
+        following: '',
+        location: '',
+    }
 
 
 
@@ -24,8 +31,8 @@ class App extends React.Component {
 
     render() {
     return(
-        <div className = "Title">
-            <h1>G I T C A R D</h1>
+        <div className = "App">
+            <Title/>
         </div>
 
        

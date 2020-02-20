@@ -2,15 +2,15 @@ body {
     font: 45px "Century Gothic", Futura, sans-serif;
     color: black;
     background-color: grey;
+    text-align: center;
     
 }
 
 .App {
     font: 45px "Century Gothic", Futura, sans-serif;
     color: white;
-    margin-top: 15%;
-    margin-left: 30%;
-    display: flex;
+    text-align: center;
+    
 }
 
 
