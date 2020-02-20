@@ -24,11 +24,12 @@ class App extends React.Component {
 
     render() {
     return(
-        <div className = "Tabs">
+        <div className = "Title">
             <h1>G I T C A R D</h1>
-            <h2>A B O U T </h2>
-            <h2>S E A R C H </h2>
         </div>
+
+       
+        
     )
     }
 }
