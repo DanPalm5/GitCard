@@ -1,28 +1,26 @@
 body {
     font: 45px "Century Gothic", Futura, sans-serif;
-    color: black;
+   
     background-color: grey;
     text-align: center;
     
 }
 
 .App {
-    font: 45px "Century Gothic", Futura, sans-serif;
     color: white;
     text-align: center;
+}
     
+
+.Title {
+    font-size: 65px;
+    color: white;
+    text-align: center;
 }
 
-
-
-.profile-picture {
-    padding: 30px;
-}
-
-.name {
-    padding: 20px;
-}
-
-.other-info {
-    padding: 20px;
+.Tab {
+    margin-top: 20%;
+    font-size: 45px;
+    color: white;
+    text-align: center;
 }
