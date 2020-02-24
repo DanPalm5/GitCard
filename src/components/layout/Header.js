@@ -17,14 +17,14 @@ function Header() {
 
 const headerStyle = {
     background: '#222',
-    color: 'white',
+    color: 'skyBlue',
     textAlign: 'center',
     padding: '10px'
 }
 
 
 const linkStyle = {
-    color: '#fff',
+    color: 'skyBlue',
     textDecoration: 'underline',
     padding: '10px'
 }
@@ -33,6 +33,6 @@ const linkStyle = {
 const subtitle = {
     fontSize: '15px',
     padding: '10px',
-    color: 'skyBlue'
+    color: 'white'
 }
 export default Header;

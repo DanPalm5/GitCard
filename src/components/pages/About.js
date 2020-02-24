@@ -25,17 +25,18 @@ export default function About() {
         fontSize: '34px',
         marginLeft: '20%',
         marginRight:'20%',
+        color: 'white'
 }
 
 
 const heading = {
     fontSize: '40px',
-    textDecoration: 'underline',
+    color: 'white',
     padding: '10px'
 }
 
 const creatorTag = {
     fontSize: '35px',
-    color: '#ddd',
+    color: 'white',
     paddingTop: '400px'
 }
