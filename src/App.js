@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import ReactDOM from 'react-dom'
-import Title from './components/Title'
-import Tab from './components/Tab'
+import Header from './components/layout/Header';
+import About from './components/pages/About';
 import './style.css'
+
 
 
 // API to get data
@@ -11,31 +13,26 @@ const API = 'https://api.github.com/users'
 
 class App extends React.Component {
     state = {
-        title: 'G I T C A R D',
-        tab: [
-            {
-                id: 1,
-                title: 'S E A R C H'
-            },
-            {
-                id: 2,
-                title: 'A B O U T'
-            }
-
-        ]
+       
     }
 
 
     render() {
     return(
+    <Router>
         <div className = "App">
-            <Title title = {this.state.title}/>
-            <Tab tab = {this.state.tab}/>
+            <Header />
+            <Route exact path = "/" render = {props => (
+                // insert components for the gitcard here
+             <React.Fragment>
+    
+            </React.Fragment>
+            )}></Route>
+               
+        <Route path = "/about" component = {About}/>
         </div>
-
-       
-        
-    )
+        </Router>
+    );
     }
 }
 

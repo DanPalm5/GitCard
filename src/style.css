@@ -1,8 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5;
+  }
+
 body {
     font: 45px "Arial", Futura, sans-serif;
-   
-    background-color: grey;
+    background-color: rgb(17, 17, 17);
     text-align: center;
+
+    background-position-y: 150px;
+    background-image: url(logo-og.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
     
 }
 
