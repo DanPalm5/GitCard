@@ -17,8 +17,26 @@ body {
     
 }
 
+
+.btn {
+    display: inline-block;
+    border: none;
+    background: #333;
+    color: #fff;
+    padding: 7px 20px;
+    cursor: pointer;
+  }
+  
+
 .App {
     color: white;
     text-align: center;
 }
 
+.container {
+    box-sizing: border-box;
+    width: 40%;
+    position: absolute;
+    transform: translateX(75%);
+    margin-top: 10%;
+}
