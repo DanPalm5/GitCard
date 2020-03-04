@@ -7,40 +7,79 @@ import Search from './components/Search';
 import Profile from './components/Profile';
 import './style.css'
 
-
+/*  GitCard v1.0.0
+    Created by Daniel Palmieri
+    Concept idea given by Hamed Esmaili
+*/
 
 // API to get data
 const API = 'https://api.github.com/users'
 
 
 class App extends React.Component {
+    constructor(props) {
+    super(props)
+    
     // state will hold the data we want to display
-    state = {
-       username: '',
-       name: '',
-       picture: '',
-       followers: '',
-       following: '',
-       repos: '',
-       location: '',
-       pageUrl: '',
-       userDne: '' // in case username is invalid
+        this.state = {
+        username: '',
+        name: '',
+        picture: '',
+        followers: '',
+        following: '',
+        repos: '',
+        location: '',
+        pageUrl: '',
+        bio: '',
+        userDne: '' // in case username is invalid
+        }
     }
 
 
+    getProfile(username) {
+        let url = `${API}/${username}`; // append username to link in order to fetch data
+
+        fetch(url)  // retrieve data from specified user
+        .then((res) => res.json() )
+        .then((info) => {
+        // populate state for each field
+        this.setState({
+            username: info.login,
+            name: info.name,
+            picture: info.avatar_url,
+            followers: info.followers_url,
+            following: info.following_url,
+            repos: info.repos_url,
+            location: info.location,
+            pageUrl: info.html_url,
+            bio: info.bio,
+            userDne: info.message
+        })
+             })
+             .catch((error) => console.log('user not found'))  // if name is not valid or is typed in wrong, catch error
+    }
+
+
+    // after component mounts, we want it to update if the username state is changed. We use componentDidMount to achieve this
+    componentDidMount() {
+        this.getProfile(this.state.username);
+    }
+
+
+
     render() {
-    return(
-    <Router>
+        return(
+        <Router>
         <div className = "App">
             <Header />
-            <div className = "container">
             <Route exact path = "/" render = {props => (
                 // insert components for the gitcard here
-             <React.Fragment>
-                 <Search search/>
-            </React.Fragment>
+             <div className = "container">
+                 <Search getProfile={this.getProfile.bind(this)} />
+                    <Profile info ={this.state} />
+
+                </div>  
             )}></Route>
-            </div>  
         <Route path = "/about" component = {About}/>
         </div>
         </Router>
