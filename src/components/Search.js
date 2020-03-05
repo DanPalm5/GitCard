@@ -1,22 +1,6 @@
 import React, { Component } from 'react'
 
 export class Search extends Component {
- 
-    handleForm(e) {
-        e.preventDefault(); // prevents default behavior from occuring, i.e to prevent a browser reload
-        let username = this.refs.username.getDOMNode().value    // refs are a way to access DOM nodes or React elements created in the render method.
-                                                                // since the username is not created until the user enters it, we have to use it here.
-
-        this.props.getProfile(username);    // props is what is passed down, we need to call .props in order to access the getProfile method
-                                            // because it is called in App.js
-
-        this.refs.username.getDOMNode.value = '';    // after form is submitted, reset the value in the textbox by accessing the username ref and 
-                                                     // and change its value
-        
-    }
-
-
-
 
     render() {
         return (            // bind is used to "bind" functions to components, i.e allow another component to call them.
@@ -36,14 +20,21 @@ export class Search extends Component {
             </form>
         )
     }
+
+    handleForm(e) {
+        e.preventDefault(); // prevents default behavior from occuring, i.e to prevent a browser reload
+        let username = this.refs.username.getDOMNode().value;   // refs are a way to access DOM nodes or React elements created in the render method.
+                                                                // since the username is not created until the user enters it, we have to use it here.
+
+        this.props.getProfile(username);    // props is what is passed down, we need to call .props in order to access the getProfile method
+                                            // because it is called in App.js
+
+        this.refs.username.getDOMNode.value = '';    // after form is submitted, reset the value in the textbox by accessing the username ref and 
+                                                     // and change its value  
+    }
+
 }
 
 
-// creating a const object to pass via JSX syntax  ( {} )
-const searchBoxStyle = {
-    flex: '10', 
-    padding: '5px',
-   
-}
 
 export default Search;

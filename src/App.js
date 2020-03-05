@@ -38,10 +38,9 @@ class App extends React.Component {
 
     getProfile(username) {
         let url = `${API}/${username}`; // append username to link in order to fetch data
-
         fetch(url)  // retrieve data from specified user
-        .then((res) => res.json() )
-        .then((info) => {
+            .then((res) => res.json() )
+                .then((info) => {
         // populate state for each field
         this.setState({
             username: info.login,
@@ -56,7 +55,7 @@ class App extends React.Component {
             userDne: info.message
         })
              })
-             .catch((error) => console.log('user not found'))  // if name is not valid or is typed in wrong, catch error
+        .catch((error) => console.log('user not found'))  // if name is not valid or is typed in wrong, catch error
     }
 
 
@@ -77,7 +76,6 @@ class App extends React.Component {
              <div className = "container">
                  <Search getProfile={this.getProfile.bind(this)} />
                     <Profile info ={this.state} />
-
                 </div>  
             )}></Route>
         <Route path = "/about" component = {About}/>

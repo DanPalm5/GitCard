@@ -5,8 +5,7 @@ export class Profile extends Component {
         let info  = this.props.info;    // We are again taking the 'info' we pulled from the App component and passing it down
                                         // to the profile component via props.
 
-        // Now we need to access the info we pulled in App.js that needs information appended to the link.
-        // repos, followers, and following all
+        // This would allow us to make the links clickable
         //let followers = `${info.pageUrl}/followers`;
         //let following = `${info.pageUrl}/following`;
        // let repos = `${info.pageUrl}?tab=repositories`;
@@ -27,12 +26,32 @@ export class Profile extends Component {
 
             // I'll use section to group the elements together
             <section className = "profile-section">
+                <div className='personal-info'>
+                    <a href ={info.pageUrl} target ="_blank" title={info.name || info.username}><img src={info.picture} alt ={info.username}/></a>
+                    <h2><a href= {info.pageUrl} title={info.username} target="_blank">{info.name || info.username}</a></h2>
+                    <h3>{info.location || 'Top Secret Location'}</h3>
+                </div>
+                <div className = "code-info">
+                    <u1>
+                        <li>
+                            {info.followers}<span>Followers</span>
+                        </li>
+                        <li>
+                            {info.repos}<span>Repositories</span>
+                        </li>
+                        <li>
+                            {info.following}<span>Following</span>
+                        </li>
+                        <li>
+                            <p>{info.bio}</p>
+                        </li>
+                    </u1>
 
-
+                </div>
             </section>
                 
         
-        )
+        );
          }
     }
 }
