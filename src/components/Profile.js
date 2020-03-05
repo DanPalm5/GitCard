@@ -25,28 +25,31 @@ export class Profile extends Component {
             //<section> element is appropriate only if the element’s contents would be listed explicitly in the document’s outline.
 
             // I'll use section to group the elements together
-            <section className = "profile-section">
-                <div className='personal-info'>
+            <section className = "profile-info">
+                <div className="usernameAndPic">
                     <a href ={info.pageUrl} target ="_blank" title={info.name || info.username}><img src={info.picture} alt ={info.username}/></a>
                     <h2><a href= {info.pageUrl} title={info.username} target="_blank">{info.name || info.username}</a></h2>
+                </div>
+                <div className = "location">
                     <h3>{info.location || 'Top Secret Location'}</h3>
                 </div>
                 <div className = "code-info">
                     <u1>
                         <li>
-                            {info.followers}<span>Followers</span>
+                            {info.followers}<span> Followers</span>
                         </li>
                         <li>
-                            {info.repos}<span>Repositories</span>
+                            {info.repos}<span> Repositories</span>
                         </li>
                         <li>
-                            {info.following}<span>Following</span>
-                        </li>
-                        <li>
-                            <p>{info.bio}</p>
+                            {info.following}<span> Following</span>
                         </li>
                     </u1>
-
+                </div>
+                <div className = "bio">
+                    <li>
+                        <p>{info.bio}</p>
+                    </li>
                 </div>
             </section>
                 

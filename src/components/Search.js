@@ -10,7 +10,7 @@ export class Search extends Component {
                 <label><input                                      // creating a searchbar via input and form
                 type = "search"
                 ref = "username"
-                style = {{flex: '10', padding: '5px'}}
+                style = {{flex: '10', padding: '5px',marginTop:'1%'}}
                 placeholder = "Enter a username...."
                 /></label>
             </form>

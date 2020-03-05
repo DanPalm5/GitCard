@@ -34,9 +34,47 @@ body {
 }
 
 .container {
+    margin-top: -0%;
+    width:100%;
     box-sizing: border-box;
-    width: 40%;
     position: absolute;
-    transform: translateX(75%);
-    margin-top: 1%;
+   
+}
+.usernameAndPic {
+  
+}
+
+.location {
+  margin-left:70%;
+}
+
+.no-user {
+  padding:1.875rem;
+  text-align: center;
+	
+}
+
+.code-info {
+  margin-right: 60%;
+  margin-top: -5%;
+
+}
+
+.bio {
+  margin-top: 12%;
+}
+
+u1{direction: ltr}
+
+li{list-style: none;margin-right:1rem;}
+a{color:skyblue;font-size: 50px;}
+
+img{ 
+  width:6.25rem;
+  height:6.25rem;
+  border-radius:50%;
+  display: block;
+  box-shadow:0 0 .0625rem rgba(0,0,0,.5);
+  margin-top: 0.5%;
+  margin-left: 47%;
 }
