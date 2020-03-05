@@ -6,9 +6,9 @@ export class Profile extends Component {
                                         // to the profile component via props.
 
         // This would allow us to make the links clickable
-        //let followers = `${info.pageUrl}/followers`;
-        //let following = `${info.pageUrl}/following`;
-       // let repos = `${info.pageUrl}?tab=repositories`;
+        let followers = `${info.pageUrl}/followers`;
+        let following = `${info.pageUrl}/following`;
+       let repos = `${info.pageUrl}?tab=repositories`;
         
         if(info.userDne === 'Not Found') {       // if user does not exist, let user know
             return (
