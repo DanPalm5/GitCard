@@ -9,7 +9,7 @@ import './style.css'
 
 /*  GitCard v1.0.0
     Created by Daniel Palmieri
-    Concept idea given by Hamed Esmaili
+    Concept idea by Hamed Esmaili
 */
 
 // API to get data
