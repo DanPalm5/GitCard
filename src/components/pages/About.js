@@ -16,17 +16,17 @@ export default function About() {
         
     )
 
-   
+}
 
-}
- const wordStyle = {
-        textAlign: 'left',
-        padding: '10px',
-        fontSize: '34px',
-        marginLeft: '20%',
-        marginRight:'20%',
-        color: 'white'
-}
+
+const wordStyle = {
+    textAlign: 'left',
+    padding: '10px',
+    fontSize: '34px',
+    marginLeft: '20%',
+    marginRight:'20%',
+    color: 'white'
+}           
 
 
 const heading = {

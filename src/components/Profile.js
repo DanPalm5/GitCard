@@ -6,9 +6,9 @@ export class Profile extends Component {
                                         // to the profile component via props.
 
         // This would allow us to make the links clickable
-        let followers = `${info.pageUrl}/followers`;
-        let following = `${info.pageUrl}/following`;
-       let repos = `${info.pageUrl}?tab=repositories`;
+        //let followers = `${info.pageUrl}/followers`;
+        //let following = `${info.pageUrl}/following`;
+        //let repos = `${info.pageUrl}?tab=repositories`;
         
         if(info.userDne === 'Not Found') {       // if user does not exist, let user know
             return (
@@ -28,13 +28,13 @@ export class Profile extends Component {
             <section className = "profile-info">
                 <div className="usernameAndPic">
                     <a href ={info.pageUrl} target ="_blank" title={info.name || info.username}><img src={info.picture} alt ={info.username}/></a>
-                    <h2><a href= {info.pageUrl} title={info.username} target="_blank">{info.name || info.username}</a></h2>
+                    <h2><a href= {info.pageUrl} style={link} title={info.username} target="_blank">{info.name || info.username}</a></h2>
                 </div>
                 <div className = "location">
                     <u1>
                         <li> {info.location || 'Top Secret Location'} </li>
                         <li> {info.company || 'Not with a company'}</li>
-                    <li>Developer since {info.memberSince.split("-",1)}</li>
+                    <li>Developer since {info.memberSince.split("-",1)}</li> 
                     </u1>
                 </div>
                 <div className = "code-info">
@@ -56,11 +56,13 @@ export class Profile extends Component {
                     </li>
                 </div>
             </section>
-                
-        
         );
          }
     }
+}
+
+const link = {
+    textDecoration: 'none'
 }
 
 export default Profile;
