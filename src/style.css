@@ -45,7 +45,9 @@ body {
 }
 
 .location {
-  margin-left:70%;
+  margin-left:65%;
+  padding:20px;
+  margin-top:-5%;
 }
 
 .no-user {
@@ -56,17 +58,17 @@ body {
 
 .code-info {
   margin-right: 60%;
-  margin-top: -5%;
+  margin-top: -19%;
 
 }
 
 .bio {
-  margin-top: 12%;
+  margin-top: 4%;
 }
 
 u1{direction: ltr}
 
-li{list-style: none;margin-right:1rem;}
+li{list-style: none;margin-right:1rem;padding:30px;}
 a{color:skyblue;font-size: 50px;}
 
 img{ 

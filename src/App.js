@@ -22,7 +22,7 @@ class App extends React.Component {
     
     // state will hold the data we want to display
         this.state = {
-        username: '',
+        username: 'DanPalm5',
         name: '',
         picture: '',
         followers: '',
@@ -31,6 +31,8 @@ class App extends React.Component {
         location: '',
         pageUrl: '',
         bio: '',
+        memberSince: '',
+        company: '',
         userDne: '' // in case username is invalid
         }
     }
@@ -52,6 +54,8 @@ class App extends React.Component {
             location: info.location,
             pageUrl: info.html_url,
             bio: info.bio,
+            memberSince: info.created_at,
+            company: info.company,
             userDne: info.message
         })
              })

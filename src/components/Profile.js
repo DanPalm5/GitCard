@@ -31,7 +31,11 @@ export class Profile extends Component {
                     <h2><a href= {info.pageUrl} title={info.username} target="_blank">{info.name || info.username}</a></h2>
                 </div>
                 <div className = "location">
-                    <h3>{info.location || 'Top Secret Location'}</h3>
+                    <u1>
+                        <li> {info.location || 'Top Secret Location'} </li>
+                        <li> {info.company || 'Not with a company'}</li>
+                    <li>Developer since {info.memberSince.split("-",1)}</li>
+                    </u1>
                 </div>
                 <div className = "code-info">
                     <u1>
