@@ -9,11 +9,11 @@ import './style.css'
 
 /*  GitCard v1.0.0
     Created by Daniel Palmieri
-    Concept idea by Hamed Esmaili
+    Concept idea by Hamed Esmaili - 44 React Project Ideas
 */
 
 // API to get data
-const API = 'https://api.github.com/users'
+const PROFILE_API = 'https://api.github.com/users'
 
 
 class App extends React.Component {
@@ -39,7 +39,7 @@ class App extends React.Component {
 
 
     getProfile(username) {
-        let url = `${API}/${username}`; // append username to link in order to fetch data
+        let url = `${PROFILE_API}/${username}`; // append username to link in order to fetch data
         fetch(url)  // retrieve data from specified user
             .then((res) => res.json() )
                 .then((info) => {
@@ -62,13 +62,10 @@ class App extends React.Component {
         .catch((error) => console.log('user not found'))  // if name is not valid or is typed in wrong, catch error
     }
 
-
     // after component mounts, we want it to update if the username state is changed. We use componentDidMount to achieve this
     componentDidMount() {
         this.getProfile(this.state.username);
     }
-
-
 
     render() {
         return(
@@ -76,7 +73,6 @@ class App extends React.Component {
         <div className = "App">
             <Header />
             <Route exact path = "/" render = {props => (
-                // insert components for the gitcard here
              <div className = "container">
                  <Search getProfile={this.getProfile.bind(this)} />
                     <Profile info ={this.state} />
